@@ -1,4 +1,13 @@
-# Dockerised Rails Development Environment
+# Contact tracker
+
+A basic Rails application to keep track of contact with friends and family, and suggest catching up with people who are at risk of falling out of touch.
+
+## Version
+
+This is pre-alpha, and does not require versioning.
+
+
+# Notes on the development environment
 
 This repository acts as a base for developing Rails applications using Docker. It uses docker-compose to set up and run a Postgres database in a separate container, running alongside the Rails application container. The production environment will require further setup before it can start functioning.
 
@@ -18,12 +27,10 @@ The Dockerfile, docker-compose, and Rails application files are all in the repo 
 
 ## Usage
 
-This repo is meant to contain a generic Rails setup, *not* the particular application that you intend to build with it. To use this, either fork https://github.com/danwhitston/rails-docker to your new application repo on GitHub, git clone it, and start work, or git clone it, start work and set the remote to a new destination. Either way, you should rewrite this README to give instructions for working with your own application.
-
 To bring up a development instance of the Docker setup:
 
 * First ensure that Docker is installed on your system, along with docker-compose
-* Run `docker-compose build` to set up the Rails and Postgres Docker instances
+* ~~Run `docker-compose build` to set up the Rails and Postgres Docker instances~~
 * Run `docker-compose up` to start a development instance
 * Your shell should show the usual Rails and Postgres command line outputs and should not give you a command line
 * Create the test and dev databases from another shell window with `docker-compose run web rake db:create`
@@ -33,12 +40,9 @@ By uncommenting some lines in the docker-compose.yml, you can also enable an Adm
 
 ## Pending tasks
 
-- [ ] Add IDE or editor configuration and documentation, so it's easier to develop with
-- [ ] Convert the setup to an initial-build script, to remove code from the repository and rebuild from fresh with each install
-- [ ] Use Ruby-3.0-Alpine as the base and add further packages as necessary
-- [ ] Add an example production config
+Pending development tasks are tracked using the GitHub project and issue trackers.
 
-## How it was created
+## How the setup was created
 
 Useful for recreating or updating:
 
