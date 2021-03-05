@@ -29,6 +29,8 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
+# TODO: This force en-GB locale on all users, including US. Change this when I18N is necessary
+
 en:
   activerecord:
     errors:
