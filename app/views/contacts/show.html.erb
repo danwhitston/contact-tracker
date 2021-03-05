@@ -10,5 +10,5 @@
   <%= @contact.date %>
 </p>
 
-<%= link_to 'Edit', edit_contact_path(@contact) %> |
-<%= link_to 'Back', contacts_path %>
+<%= link_to 'Edit', edit_person_contact_path(@person, @contact) %> |
+<%= link_to 'Back', person_contacts_path(@person) %>

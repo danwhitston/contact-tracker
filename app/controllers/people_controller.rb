@@ -4,7 +4,7 @@ class PeopleController < ApplicationController
   # GET /people or /people.json
   def index
     @people = if params[:sort] == 'date'
-                Person.all.sort_by { |p| p.contacts&.first&.date || 0 }
+                Person.all.sort_by { |p| helpers.latest_contact(p) || 0 }
               else
                 Person.all # sorts by name by default!
               end
