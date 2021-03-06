@@ -15,7 +15,8 @@ This repository acts as a base for developing Rails applications using Docker. I
 
 The current versions of various dependencies are:
 
-* Ruby 3.0 - this is the base Docker image 
+* postgres - Docker image for the database
+* Ruby:3.0 - Docker image that the application builds on
 * postgresql-client latest via apt-get
 * Nodejs 14.x latest via https://deb.nodesource.com/setup_14.x
 * NPM latest via https://www.npmjs.com/install.sh
